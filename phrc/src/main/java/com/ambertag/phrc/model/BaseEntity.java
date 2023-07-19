@@ -2,7 +2,6 @@ package com.ambertag.phrc.model;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
-import java.util.Calendar;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -82,14 +81,14 @@ public class BaseEntity implements Serializable {
 		this.version = version;
 	}
 
-	@PrePersist
-	public void createAuditInfo() {
-		setCreatedDate(Calendar.getInstance().getTime());
-		setUpdatedDate(new Timestamp(Calendar.getInstance().getTimeInMillis()));
-	}
-	
-	public void updateAuditInfo() {
-		setUpdatedDate(new Timestamp(Calendar.getInstance().getTimeInMillis()));
-	}
+//	@PrePersist
+//	public void createAuditInfo() {
+//		setCreatedDate(Calendar.getInstance().getTime());
+//		setUpdatedDate(new Timestamp(Calendar.getInstance().getTimeInMillis()));
+//	}
+//	
+//	public void updateAuditInfo() {
+//		setUpdatedDate(new Timestamp(Calendar.getInstance().getTimeInMillis()));
+//	}
 
 }

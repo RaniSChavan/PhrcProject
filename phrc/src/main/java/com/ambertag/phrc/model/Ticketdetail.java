@@ -12,7 +12,7 @@ import lombok.Data;
 
 @Entity
 @Data
-public class Ticketdetail extends BaseEntity{
+public class Ticketdetail extends BaseEntity {
 	/**
 	 * 
 	 */
@@ -79,4 +79,68 @@ public class Ticketdetail extends BaseEntity{
 	private String ticketDescription;
 
 	
+	public String getTicketStatus() {
+		return ticketStatus;
+	}
+
+	public void setTicketStatus(String ticketStatus) {
+		this.ticketStatus = ticketStatus;
+	}
+	
+	
+	
+	@Column(name = "senior_doctor")
+	private String seniorDoctor;
+	@Column(name = "junior_doctor")
+	private String juniorDoctor;
+	@Column(name = "selectBed")
+	private String selectBed;
+	@Column(name = "nurse")
+	private String nurse;
+	@Column(name = "common_asset")
+	private String commonAsset;
+
+
+	public String getSeniorDoctor() {
+		return seniorDoctor;
+	}
+
+	public void setSeniorDoctor(String seniorDoctor) {
+		this.seniorDoctor = seniorDoctor;
+	}
+
+	public String getJuniorDoctor() {
+		return juniorDoctor;
+	}
+
+	public void setJuniorDoctor(String juniorDoctor) {
+		this.juniorDoctor = juniorDoctor;
+	}
+
+	public String getSelectBed() {
+		return selectBed;
+	}
+
+	public void setSelectBed(String selectBed) {
+		this.selectBed = selectBed;
+	}
+
+	public String getNurse() {
+		return nurse;
+	}
+
+	public void setNurse(String nurse) {
+		this.nurse = nurse;
+	}
+
+	public String getCommonAsset() {
+		return commonAsset;
+	}
+
+	public void setCommonAsset(String commonAsset) {
+		this.commonAsset = commonAsset;
+	}
+
+	
+		
 }
